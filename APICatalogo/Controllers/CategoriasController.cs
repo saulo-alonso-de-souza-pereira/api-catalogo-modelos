@@ -40,7 +40,7 @@ public class CategoriasController : ControllerBase
         var categoria = await _context.Categorias.FirstOrDefaultAsync(c => c.CategoriaId == id);
         if(categoria is null)
         {
-            return NotFound("Categoria não encontrada");
+            return NotFound("Categoria não encontrada.");
         }
         return categoria;
     }
