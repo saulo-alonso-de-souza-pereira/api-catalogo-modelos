@@ -23,7 +23,7 @@ public class CategoriasController : ControllerBase
         var categorias = await _context.Categorias.AsNoTracking().Take(10).ToListAsync();
         if (categorias is null)
         {
-            return NotFound("Categorias não encontradas...");
+            return NotFound("Categorias não encontradas.");
         }
         return categorias;
     }
