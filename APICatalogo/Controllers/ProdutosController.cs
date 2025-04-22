@@ -22,7 +22,7 @@ public class ProdutosController : ControllerBase
     {
         try
         {
-            var produtos = _context.Produtos.AsNoTracking().ToListAsync();
+            var produtos = await _context.Produtos.AsNoTracking().ToListAsync();
             if (produtos is null)
             {
                 return NotFound("Produtos não encontrados.");
